@@ -21,13 +21,12 @@ try:
         y = data['sentiments']
 
         y_pred_sv = saved_model.predict(x_vec)
+        st.write(
+            "The list of reviews where the reviews and ratings probably don't match are as below"
+        )
         for i in range(0, len(data)):
             if (y_pred_sv[i] == 1 and y.iloc[i] == 0):
                 st.write(data['Text'][i], "\t", data['Star'][i])
 except Exception as e:
     st.write(e)
     raise e
-
-    st.write(
-        "The list of reviews where the reviews and ratings probably don't match are as below"
-    )
