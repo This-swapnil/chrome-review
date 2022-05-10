@@ -1,8 +1,0 @@
-https://medium.com/analytics-vidhya/introduction-bd62190f6acd
-
-https://towardsdatascience.com/sentiment-analysis-of-tweets-167d040f0583
-
-https://towardsdatascience.com/twitter-sentiment-analysis-with-keras-and-nltk-48189967f190
-
-https://www.analyticsvidhya.com/blog/2021/06/twitter-sentiment-analysis-a-nlp-use-case-for-beginners/
-

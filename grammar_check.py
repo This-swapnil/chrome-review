@@ -2,12 +2,12 @@ from email import header
 from wsgiref.headers import Headers
 import pandas as pd
 import language_tool_python as ltp
-from sqlalchemy import column
 
 
 # load the data
 def read_data(file_name):
     data = pd.read_csv(file_name, usecols=['text'])
+    data.dropna(inplace=True)
     return data
 
 
@@ -30,5 +30,6 @@ def grammar_check(df):
     df1.to_csv('Correction.csv', header=['text', 'mistek', 'correction'])
 
 
-data = read_data("review_data.csv")
-grammar_check(data)
+if __name__ == "__main__":
+    data = read_data("review_data.csv")
+    grammar_check(data)
