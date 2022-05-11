@@ -13,6 +13,13 @@ def read_data(file_name):
 
 # grammar check function
 def grammar_check(df):
+    """Grammar check function to check the grammar of the text and return the list of errors and also provide the right suggestions.
+
+    Args:
+        df (_type_): dataset to check the grammar
+    Returns:
+        new csv file, if there is any error it show the suggestions and if not it will show No Corrections
+    """
     df1 = pd.DataFrame()
     tool = ltp.LanguageTool('en-US')
     for i in df.index:
