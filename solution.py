@@ -14,6 +14,9 @@ class Train:
     # data preprocessing
     def preprocessing(self):
         """Data Preprocessing
+           Drop NaN values
+           Add sentiment column into dataset based on the rating 
+           If the rating is 1 or 2 then set the value 0 and if the rating value is 3 to 5 then 1
 
         Returns:
             Preprocessed data
